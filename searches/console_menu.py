@@ -85,7 +85,7 @@ def menu():
             print("")
         menu()
     elif choice == "D" or choice == "d":
-        album_id = input("Put the artist id: ")
+        album_id = input("Put the album id: ")
         songs_in_album = get_songs_in_album(album_id)
         for song in songs_in_album:
             print(song.__str__())

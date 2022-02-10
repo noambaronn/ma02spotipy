@@ -1,4 +1,3 @@
-import json
 import ma02spotipy.constants as const
 
 class Song:

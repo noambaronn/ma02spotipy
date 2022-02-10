@@ -20,7 +20,7 @@ def get_albums_by_artist_id(artist_id: str):
 
 def get_songs_in_album(album_id: str):
     is_exist = False
-    set_of_artists, set_of_albums = load_to_objects(list_of_tracks())
+    set_of_artists, set_of_albums = load_to_objects(list_of_tracks(const.SONGS_DIRECTORY_PATH))
     for album in set_of_albums:
         if album.id_of_album == album_id:
             is_exist = True
@@ -32,7 +32,7 @@ def get_songs_in_album(album_id: str):
 def get_all_the_artists_songs(artist_id: str):
     is_artist_exist = False
     all_the_songs_of_artist = []
-    set_of_artists, set_of_albums = load_to_objects(list_of_tracks())
+    set_of_artists, set_of_albums = load_to_objects(list_of_tracks(const.SONGS_DIRECTORY_PATH))
     for artist in set_of_artists:
         if artist.id_of_artist == artist_id:
             is_artist_exist = True
