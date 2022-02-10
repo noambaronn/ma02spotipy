@@ -1,5 +1,7 @@
-from spotipy.objects.song import Song
-import spotipy.constants as const
+from typing import List, Dict
+
+from ma02spotipy.objects.song import Song
+import ma02spotipy.constants as const
 
 
 def load_to_objects(list_of_tracks: List[Dict[str, str]]):
