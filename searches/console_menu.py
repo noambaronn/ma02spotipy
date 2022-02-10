@@ -77,6 +77,13 @@ def menu():
             print(album.__str__())
             print("")
         menu()
+    elif choice == "C" or choice == "c":
+        id = input("Put the artist id: ")
+        popular_songs = get_the_best_songs_by_popularity(id, const.IS_PREMIUM)
+        for song in popular_songs:
+            print(song.__str__())
+            print("")
+        menu()
 
 
 if __name__ == '__main__':
