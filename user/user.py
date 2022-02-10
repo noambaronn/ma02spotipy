@@ -21,3 +21,17 @@ class User():
             self.is_premium = False
         else:
             self.is_premium = is_premium
+
+    def add_playlist(self, playlist_name: str):
+        for playlist in self.playlists:
+            if playlist.name == playlist_name:
+                raise PlaylistNameIsAlreadyExists
+        if (self.is_premium == False) and (len(self.playlists) < 5):
+            self.playlists.append(Playlist(playlist_name, self.is_premium))
+        else:
+            raise BasicUserCanHaveOnly5Playlist
+
+    def get_playlist_by_name(self, name_p: str):
+        for playlist in self.playlists:
+            if playlist.name == name_p:
+                return playlist
