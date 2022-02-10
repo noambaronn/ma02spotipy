@@ -1,5 +1,7 @@
 from typing import List, Dict
 
+from ma02spotipy.objects.album import Album
+from ma02spotipy.objects.artist import Artist
 from ma02spotipy.objects.song import Song
 import ma02spotipy.constants as const
 

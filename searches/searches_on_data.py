@@ -6,12 +6,16 @@ import ma02spotipy.constants as const
 
 def get_albums_by_artist_id(artist_id: str):
     albums = ""
+    is_exist = False
     set_of_artist, set_of_albums = load_to_objects(list_of_tracks(const.SONGS_DIRECTORY_PATH))
     for artist in set_of_artist:
         if artist.id_of_artist == artist_id:
+            is_exist = True
             for album in artist.albums_of_artist:
                 albums += album.name_of_album
             return albums
+    if is_exist == False:
+        raise ArtistNotExist
 
 
 def get_songs_in_album(album_id: str):
