@@ -7,4 +7,9 @@ class Playlist:
             self.is_premium = is_premium
         self.songs_ids = []
 
-    
+    def add_song(self, song_id: str):
+        if self.is_premium == False:
+            if len(self.songs_ids) < 20:
+                self.songs_ids.append(song_id)
+            else:
+                raise BasicUserCanHaveOnly20Songs
