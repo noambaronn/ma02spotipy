@@ -84,7 +84,20 @@ def menu():
             print(song.__str__())
             print("")
         menu()
-
+    elif choice == "D" or choice == "d":
+        album_id = input("Put the artist id: ")
+        songs_in_album = get_songs_in_album(album_id)
+        for song in songs_in_album:
+            print(song.__str__())
+            print("")
+        os.system('clear')
+        menu()
+    elif choice == "E" or choice == "e":
+        sys.exit()
+    else:
+        print("You must only select either A, B, C, D or E")
+        print("Please try again")
+        menu()
 
 if __name__ == '__main__':
     menu()
