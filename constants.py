@@ -1,5 +1,5 @@
 SONGS_DIRECTORY_PATH = "../resources/songs/"
-SONGS_DIRECTORY_FOR_MENU = "resources/songs/"
+SONGS_DIRECTORY_FOR_MENU = "../resources/songs/"
 SONG = "song"
 TRACK = "track"
 ALBUM = "album"
