@@ -1,3 +1,6 @@
+from ma02spotipy.exceptions import *
+
+
 class Playlist:
     def __init__(self, name, is_premium=None):
         self.name = name
